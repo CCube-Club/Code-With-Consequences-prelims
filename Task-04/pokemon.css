@@ -1,0 +1,125 @@
+body {
+  height: 100%;
+}
+
+html {
+  text-decoration: none;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+    width: 90vw;
+}
+
+#search-card{
+    background-color: black;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin: 0 20px;
+    font-size: 16px;
+  }
+
+.search-message{
+    text-align: center;
+  margin-top: 10px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+}
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    background: #a2a2a2d2 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+
+
+  .card img:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3    px;
+  }
+  
+  .card .types {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card .type {
+    display: inline-block;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+  }
+
+  .tag{
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin: 2px;
+    color: white;
+    font-weight: 700;
+    text-transform: capitalize;
+    width: fit-content;
+  }
+
+  #tags{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 10px;
+  }
+
+  .tag-box{
+    margin: 35px 0px;
+  }
