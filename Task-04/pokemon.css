@@ -47,13 +47,13 @@ main{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
-  }
+}
   
   .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     background-color: #fff;
     border-radius: 5px;
     padding: 5px;
@@ -67,6 +67,7 @@ main{
     transition: transform 0.3s ease-in-out;
     border-radius: 5px;
   }
+
 
   .card img:hover {
     transform: scale(1.05);
@@ -84,7 +85,7 @@ main{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 3    px;
   }
   
   .card .types {
@@ -109,4 +110,16 @@ main{
     color: white;
     font-weight: 700;
     text-transform: capitalize;
+    width: fit-content;
+  }
+
+  #tags{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 10px;
+  }
+
+  .tag-box{
+    margin: 35px 0px;
   }

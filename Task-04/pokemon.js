@@ -39,8 +39,15 @@ const createCard = (pokemon) => {
   card.appendChild(name);
 
   const types = document.createElement("p");
-  types.textContent = pokemon.types.map((type) =>
-    card.appendChild(typeTag(type.type.name))
+  types.textContent = pokemon.types.map((type) =>{
+     card.appendChild(typeTag(type.type.name))
+     
+    if (!allTypeList.includes(type)) {
+        allTypeList.push(type.type.name);
+        typeFilter.appendChild(typeTag(type.type.name));
+      }
+  }
+   
   );
 
   cardContainer.appendChild(card);
@@ -82,14 +89,16 @@ const typeTag = (type) => {
 
   tag.classList.add("tag");
   tag.textContent = type;
-  if (!allTypeList.includes(type)) {
-    allTypeList.push(type);
-    typeFilter.appendChild(tag);
-  }
+  tag.addEventListener("click",)
   return tag;
 };
 
+const tagTap = (type) =>{
+    
+}
+
 const displayData = (data) => {
+    allTypeList = [];
   typeFilter.innerHTML = "";
   cardContainer.innerHTML = "";
   data.forEach(async (pokemon) => {
@@ -112,6 +121,7 @@ const init = async () => {
   filterInput.addEventListener("input", () => {
     filterData(data.results, filterInput.value);
   });
+
 };
 
 init();
