@@ -1,178 +1,278 @@
 @font-face {
-    font-family: "Inconsolata";
-    src: url("https://ggayane.github.io/css-experiments/Inconsolata-VF.ttf");
-    font-weight: 100 900;
-    font-stretch: 50% 200%;
-  }
+  font-family: "Inconsolata";
+  src: url("https://ggayane.github.io/css-experiments/Inconsolata-VF.ttf");
+  font-weight: 100 900;
+  font-stretch: 50% 200%;
+}
 
 body {
-    height: 100%;
-    color: #FFFFFF;
-    font-size: 8em;
-    font-family: 'Inconsolata';
-  }
-  
-.cursor {
-    left: 0;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    background-color: #f44336;
-    position: absolute;
-    border-radius: 5px;
-  }
-  
-.cursor__follower {
-    transition: transform .4s;
-    width: 6px;
-    height: 6px;
-  }
+  height: 100%;
+  color: #FFFFFF;
+  font-size: 8em;
+  font-family: 'Inconsolata';
+}
 
-  
+.cursor {
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #f44336;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.cursor__follower {
+  transition: transform .4s;
+  width: 6px;
+  height: 6px;
+}
+
+
 .vidyut {
-    width: 50px;
-    height: 50px;
-  }
-  
+  width: 50px;
+  height: 50px;
+}
+
 .cisai {
-    width: 90px;
-  }
-  
-  
+  width: 90px;
+}
+
+
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 80px;
-    background-color: #2d2b2b;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 999;
-    width: 100vw;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  background-color: #2d2b2b;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 999;
+  width: 100vw;
+}
+
 .first-logo {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    flex-grow: 2;
-  }
-  
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-grow: 2;
+}
+
 .second-logo {
-    flex-grow: 3.3;
-  }
-  
+  flex-grow: 3.3;
+}
+
+
 html {
-    text-decoration: none;
-    background-color: #2d2b2b;
-  }
-  
+  text-decoration: none;
+  background-color: #2d2b2b;
+}
+
 .typewriter h1 {
-    color: #fff;
-    font-family: 'Waiting for the Sunrise', cursive;
-    overflow: hidden; 
-    border-right: .15em solid orange; 
-    white-space: nowrap;
-    letter-spacing: .15em; 
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
-  }
+  color: #fff;
+  font-family: 'Waiting for the Sunrise', cursive;
+  overflow: hidden; 
+  border-right: .15em solid orange; 
+  white-space: nowrap;
   
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
+  from { width: 0 }
+  to { width: 100% }
+}
+
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: red }
-  }
-  
+  from, to { border-color: transparent }
+  50% { border-color: red }
+}
+
 section {
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    color: #ffff;
-    height: 100vh;
-  }
-  
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #ffff;
+  height: 100vh;
+}
 .first {
-    cursor: none;
-  }
-  
+  cursor: none;
+  height: 50vh;
+}
+.second {
+  height: 50vh;
+}
+
+
+
 h1 {
-    font-size: 70px;
-  }
-  
+  font-size: 70px;
+}
+
 h2 {
-    font-family: monospace;
-    font-size: 50px;
-  }
-  
+  font-family: monospace;
+  font-size: 50px;
+}
+
 span, p {
-    font-size: 20px;
-  }
+  font-size: 20px;
+}
 
 #wrapper {
-    /* width: 90vw; */
-    color: rgb(255,255,255);
-    height: 180px;
-    margin-left: 2em;
+  /* width: 90vw; */
+  color: rgb(255,255,255);
+  height: 200px;
+  width: 100%;
+  margin-left: 2em;
+  
 }
 
 #work {
-    font-size: 0.2em;
-    font-weight:900;
+  font-size: 0.2em;
+  font-weight:900;
 }
 
 #life {
-    font-size: 0.2em;
-    font-weight:100;
+  font-size: 0.2em;
+  font-weight:100;
 }
 
 #balance {
-   font-size: 0.6em;
-   line-height: 0.3em;
-   font-weight: 400;
+ font-size: 0.6em;
+ line-height: 0.3em;
+ font-weight: 400;
 }
 
 .main {
-  display: flex;
-  width: 100%;
+display: flex;
+width: 100%;
+justify-content: center;
+place-items: center;
 }
 
 #color-sliders {
-  font-size: 2rem;
-  padding-top: 2em;
-  padding-left: 3em;
+font-size: 2rem;
+padding-top: 2em;
+padding-left: 3em;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+flex-wrap: wrap;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
-  }
-
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  ::-webkit-scrollbar {
-  width: 20px;
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
 }
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+width: 20px;
+}
+
+.range input{
+-webkit-appearance:none;
+width:400px;
+height:4px;
+border-radius:5px;
+background-color:#ba3950;
+outline:none;
+}
+.range input::-webkit-slider-thumb{
+-webkit-appearance:none;
+width:20px;
+height:20px;
+border-radius:50%;
+background-color:#a83348;
+}
+.range span{
+position:absolute;
+margin-left:14px;
+width:50px;
+height:30px;
+background-color:#222;
+color:#fff;
+border-radius:3px;
+text-align:center;
+line-height:30px;
+}
+.range span:before{
+content:'';
+position:absolute;
+border-right:9px solid transparent;
+border-left:9px solid transparent;
+border-bottom:12px solid #222;
+left:-10px;
+top:50%;
+transform:translateY(-50%) rotate(-90deg);
+}
+
+
+#slider {
+background-color: rgb(208, 237, 103);
+}
+
+#slider::-webkit-slider-thumb {
+background-color: white;
+}
+
+
+#red-slider {
+background-color: rgb(233, 95, 95);
+}
+
+#red-slider::-webkit-slider-thumb {
+background-color: white;
+}
+
+
+#green-slider {
+background-color: rgb(60, 221, 60);
+}
+
+#green-slider::-webkit-slider-thumb {
+background-color: white;
+}
+
+
+#blue-slider {
+background-color: rgb(88, 88, 231);
+}
+
+#blue-slider::-webkit-slider-thumb {
+background-color: white;
+}
+
+@media screen and (min-width: 1024px) {
+.first {
+  height: 100vh;
+}
+}
+@media screen and (min-width: 1024px) {
+  .second {
+    height: 100vh;
+  }
+  }
