@@ -17,46 +17,56 @@
     </nav> 
   </header>
   <section class="first"> 
-    <h2>Welcome to the</h2>
+    <h2>Welcome to</h2>
     <div class="typewriter">
-      <h1>"Code With Consequences"</h1>
+      <h1>"Team ATLAS"</h1>
     </div>
-    <span>Scroll down for task description ↓</span>
+    <span>Scroll down for description ↓</span>
   </section> 
   <section class="second">
-    <h2>Task description</h2>
+    <h2 class="h2-animate">Description</h2>
     <p>
-        Here one slider changes the size of the word "Aum", similiarly. 
-        Add three more slider controls, each with a ranging from 0 to 255 (eg. 1st slider takes R value, 2nd takes G & 3rd takes B value.), to pick an RGB colour code and apply this colour code to the colour of the font used to display the text 'AUM NAMAH SHIVAYA'.
+        Here one slider changes the size of the word "Aum" & "NAMAH". Similiarly, 
+        the three more slider controls, each with a ranging from 0 to 255, will cahnge tthe color scheme of the text "AUM NAMAH SHIVAYA!".
+        The 'rbg' section show the corresponding colour value.
         <br><br>
-        Remember, Evaulation will be done only on the basis of creativity, but not on the basis of completing the given tasks. So, try to be creative as much as you can.
+        <em>Change the sliders and see the changes.</em>
     </p>
     <div class="main">
       <div id="color-sliders">
         <div>
-          <label for="blue-slider">Size:</label>
+          <label for="blue-slider"><span class="size-sec">Size</span>:</label>
           <input type="range" id="slider" min="1" max="9" value=2 onchange="update(this.value);">
-        </div>
-        <div>
-          <label for="red-slider">Red:</label>
+        </div> <br>
+        <div class="red-se">
+          <label style="color: red;" for="red-slider"><span class="red-sec">Red</span> :</label>
 <!--          Todo: Add a slider here (Note: id="red-slider")-->
-        </div>
+          <input class="slider-red" type="range" id="red-slider" min="0" max="255" value=0 onchange="updateColor(this.value);">
+        </div> <br>
         <div>
-          <label for="green-slider">Green:</label>
+          <label style="color: green;" for="green-slider"><span class="green-sec">Green</span>:</label>
 <!--          Todo: Add a slider here (Note: id="green-slider")-->
-        </div>
+          <input class="slider-green" type="range" id="green-slider" min="0" max="255" value=0 onchange="updateColor(this.value);">
+        </div> <br>
         <div>
-          <label for="blue-slider">Blue:</label>
+          <label style="color: blue;" for="blue-slider"><span class="blue-sec">Blue</span> :</label>
 <!--          Todo: Add a slider here (Note: id="blue-slider")-->
+          <input class="slider-blue" type="range" id="blue-slider" min="0" max="255" value=0 onchange="updateColor(this.value);">
+        </div> <br>
+        <div>
+          <label for="rbg"><span class="rbg-sec">rbg</span> :</label>
+          <input class="slider-rbg" type="text" id="rbg-slider" onchange="updateColor(this.value);">
         </div>
       </div>
-      <div id="wrapper">
-        <div>
+
+      <div class="wrapper" id="wrapper">
+        <div id="color-sec">
           <span id="work">AUM </span><span id="life">NAMAH</span>
         </div>
         <div id="balance">SHIVAYA!</div>
       </div>
   </div>
+       
            
   </section>
   <script  src="script.js"></script>

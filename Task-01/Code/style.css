@@ -1,11 +1,9 @@
-/*Todo: import Merienda font from Google Font with 500 font weight  */
-/*Todo: import Arvo font from Google Font with 400 and 700 font weight (Note: Google Fonts allow importing multiple font weights, find how :) )*/
-
-/*Todo: make the page responsive by fixing the css where ever necessary*/
 body {
     margin: 0;
     height: 100vh;
-    /*Todo: center all the contend using appropriate properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f5f5f5;
 }
 .card {
@@ -17,24 +15,27 @@ body {
     border: #414141 9px solid;
     flex-direction: row;
     border-radius: 30px;
-    /*Todo: css required to make the image-avatar div floating */
+    position: relative;
 }
 .card .title {
     font-family: 'Arvo', serif;
     padding: 1rem;
-    text-align: right;
+    text-align: top
+    ;
     color: rgb(39 39 42);
     font-size: 14px;
 }
 .card .desc {
     font-family: 'Merienda', cursive;
     padding: 0.5rem 1rem;
-    font-size: 12px;
+    font-size: 15px;
     color: #666666;
+    overflow: hidden;
 }
+
 .card .actions {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     align-items: center;
     padding: 0.5rem 1rem;
 }
@@ -45,23 +46,28 @@ body {
 }
 
 .img-avatar {
-    width: 180px;
-    height: 180px;
-    /*Todo: position this div to overlay the card */
+    width: 130px;
+    height: 130px;  
+    position:absolute;
+    object-fit:cover;
     border-radius: 50%;
     border: 6px solid white;
     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-    top: 45px;     /*Todo: can we make it responsive ? */
-    left: 170px;   /*Todo: can we make it responsive ? */
+    top: 20%;     
+    left: 20%; 
 }
 
 .card-text {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
 }
 
 .title-total {
-    padding: 14.5em 1.5em 1.5em 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    
+    padding: 8em 1.5em 1.5em 1.5em;
 }
 
 path {
@@ -69,14 +75,18 @@ path {
 }
 
 .profile-image {
-    width: 100%;
+    width: 110%;
     height: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     background-position: bottom center;
     background-size: cover;
     background-color: #000000;
-    /*Todo: apply a background gradient at 315deg from color #000000 0% to #414141 74% (Or play around with more css )*/
+    background-image: linear-gradient(
+        315deg,
+        #000000 0%,
+        #414141 74%
+      );
 }
 
 .name {
@@ -86,3 +96,20 @@ path {
     color: rgb(55 65 81);
     margin: 0;
 }
+
+.button {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    border-radius: 6px;
+    padding: 6px;
+    margin-left: 10px;
+    font-family: 'Merienda', cursive;
+  }
+  .button:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    color: rgb(55 65 81);
+  }
+  
