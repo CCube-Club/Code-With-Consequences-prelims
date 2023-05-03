@@ -1,11 +1,16 @@
 /*Todo: import Merienda font from Google Font with 500 font weight  */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap');
 /*Todo: import Arvo font from Google Font with 400 and 700 font weight (Note: Google Fonts allow importing multiple font weights, find how :) )*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 
 /*Todo: make the page responsive by fixing the css where ever necessary*/
 body {
     margin: 0;
     height: 100vh;
     /*Todo: center all the contend using appropriate properties */
+    display: flex;
+        justify-content: center;
+        align-items: center;
     background-color: #f5f5f5;
 }
 .card {
@@ -18,6 +23,7 @@ body {
     flex-direction: row;
     border-radius: 30px;
     /*Todo: css required to make the image-avatar div floating */
+    position: relative;
 }
 .card .title {
     font-family: 'Arvo', serif;
@@ -48,11 +54,22 @@ body {
     width: 180px;
     height: 180px;
     /*Todo: position this div to overlay the card */
+    position: absolute;
+        transform: translate(-35%, -10%);
     border-radius: 50%;
     border: 6px solid white;
     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
     top: 45px;     /*Todo: can we make it responsive ? */
     left: 170px;   /*Todo: can we make it responsive ? */
+
+}
+.img-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* added */
+    border-radius: 50%;
+    /* added */
 }
 
 .card-text {
@@ -76,7 +93,8 @@ path {
     background-position: bottom center;
     background-size: cover;
     background-color: #000000;
-    /*Todo: apply a background gradient at 315deg from color #000000 0% to #414141 74% (Or play around with more css )*/
+    /*Todo: apply a background gradient at 315deg from color #000000 0% to #414141 74% (Or play around with more css )*/background: linear-gradient(315deg, #000000 0%, #414141 74%)
+    
 }
 
 .name {
@@ -85,4 +103,42 @@ path {
     font-weight: bold;
     color: rgb(55 65 81);
     margin: 0;
+}
+@media screen and (max-width: 768px) {
+    
+    .card {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        
+    }
+
+    .img-avatar {
+        transform: translate(-100%, -100%);
+        top: 35%;
+        left: 29%;
+        width: 80px;
+            height: 80px;
+        
+    }
+
+    .card-text {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .title-total {
+        padding: 2rem;
+        
+    }
+
+    .profile-image {
+        height: 50%;
+        border-radius: 20px;
+    }
+
+    .name {
+        font-size: 2.5em;
+    }
+       
 }
