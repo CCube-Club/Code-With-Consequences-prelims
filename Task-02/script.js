@@ -36,5 +36,8 @@ function updateColor() {
 
   // Todo: Update the text color
 
-}
+  document.getElementById("work").style.color = colorString;
+  document.getElementById("life").style.color = colorString;
+  document.getElementById("balance").style.color = colorString;
+ }
   
