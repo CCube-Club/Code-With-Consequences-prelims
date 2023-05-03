@@ -1,16 +1,21 @@
 /*Todo: import Merienda font from Google Font with 500 font weight  */
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 /*Todo: import Arvo font from Google Font with 400 and 700 font weight (Note: Google Fonts allow importing multiple font weights, find how :) )*/
-
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;1,700&display=swap');
 /*Todo: make the page responsive by fixing the css where ever necessary*/
 body {
     margin: 0;
     height: 100vh;
     /*Todo: center all the contend using appropriate properties */
     background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card {
     background: #fff;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    position: relative;
+    /* box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); */
     display: flex;
     width: 40%;
     height: 60%;
@@ -18,6 +23,13 @@ body {
     flex-direction: row;
     border-radius: 30px;
     /*Todo: css required to make the image-avatar div floating */
+    min-width: 300px;
+    min-height: 600px;
+    transition: all ease-in-out 1s;
+}
+.card:hover{
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    transition: all ease-in-out 1s;
 }
 .card .title {
     font-family: 'Arvo', serif;
@@ -31,6 +43,7 @@ body {
     padding: 0.5rem 1rem;
     font-size: 12px;
     color: #666666;
+    min-height: 140px;
 }
 .card .actions {
     display: grid;
@@ -48,19 +61,26 @@ body {
     width: 180px;
     height: 180px;
     /*Todo: position this div to overlay the card */
+    position: absolute;
     border-radius: 50%;
     border: 6px solid white;
     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-    top: 45px;     /*Todo: can we make it responsive ? */
-    left: 170px;   /*Todo: can we make it responsive ? */
+    top: 10%;     /*Todo: can we make it responsive ? */
+    left: 20%;   /*Todo: can we make it responsive ? */
 }
-
+.img-avatar img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
 .card-text {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 2fr;
 }
 
 .title-total {
+    /* width: 100%; */
     padding: 14.5em 1.5em 1.5em 1.5em;
 }
 
@@ -77,12 +97,99 @@ path {
     background-size: cover;
     background-color: #000000;
     /*Todo: apply a background gradient at 315deg from color #000000 0% to #414141 74% (Or play around with more css )*/
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
 }
 
 .name {
     font-family: 'Arvo', serif;
-    font-size: 4.5em;
+    font-size: 3.5em;
     font-weight: bold;
     color: rgb(55 65 81);
     margin: 0;
 }
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.buttons .button-property{
+    position: relative;
+    margin-top: 20px;
+    margin-left:10px ;
+    padding: 10px;
+    background-color: rgb(55 65 81);
+    color: #fff;
+    font-family: 'Arvo', serif;
+    border-style: none;
+    border-radius: 10px;
+    transition: all ease-in-out 0.3s;
+}
+
+.buttons .button-property:hover{
+    background-color: #fff;
+    color: rgb(55 65 81);
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+.buttons .button-property::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(55 65 81);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+  
+  .buttons .button-property:hover::after {
+    background-color: rgb(55 65 81);
+    width: 40%; 
+    left: 30%; 
+    transition: all ease-in-out 0.3s;
+}
+
+.buttons .button-property:active{
+    transform: scale(0.94);
+}
+
+@media (max-width: 1098px) {
+    .profile-image{
+        display: none;
+    }
+    .card-text{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+    }
+    .title{
+        text-align: center !important;
+        margin-top: 10px;
+    }
+    .name{
+        text-align: center !important;
+    }
+}
+@media screen and (min-width: 1920px) {
+        .title{
+            font-size: 1.5em !important;
+        }
+        .name{
+            font-size: 6em;
+        }
+        .desc{
+            font-size: 1.6em !important; 
+        }
+        .img-avatar{
+            transform: scale(1.2);
+        }
+        .buttons{
+            margin-top: 30px;
+            transform: scale(1.6);
+        }
+    }
