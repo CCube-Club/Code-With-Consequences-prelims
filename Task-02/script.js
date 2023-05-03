@@ -33,8 +33,15 @@ function updateColor() {
   var greenValue = document.getElementById("green-slider").value;
   var blueValue = document.getElementById("blue-slider").value;
   var colorString = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
-
-  // Todo: Update the text color
+  var textElement = document.getElementById("wrapper");
+  textElement.style.color = colorString;
+  document.getElementById("red-value").textContent = redValue;
+  document.getElementById("green-value").textContent = greenValue;
+  document.getElementById("blue-value").textContent = blueValue;
 
 }
+document.getElementById("red-slider").addEventListener("input", updateColor);
+document.getElementById("green-slider").addEventListener("input", updateColor);
+document.getElementById("blue-slider").addEventListener("input", updateColor);
+
   
