@@ -1,6 +1,8 @@
+const button = document.querySelector('input');
+const rand = document.getElementById('radian-btn');
+const base = document.getElementById('base-btn');
 const root = document.querySelector("html");
 
-let isRadian = false;
 let isLog10 = false;
 
 const cursor = document.createElement("div");
@@ -98,17 +100,38 @@ function checkNum(str) {
   return true;
 }
 
-function switchTheme() {
-    // Todo : toggle the dark class on the calculator element
-    // Todo : toggle the dark class on the calculator element
-    // Todo : You may further move with your own css to change the theme of the calculator
+var y = document.getElementById("rad")
+
+rand.addEventListener("click",toggleRad);
+
+function toggleRad(){
+  if(rand.value == 'Radian'){
+  rand.value = "Degree";
+}else{
+  rand.value = "Radian";
+
+}
 }
 
-function toggleRad() {
-  Todo //: use isRadian to determine which conversion to use and hence update the #display value
-}
-
+base.addEventListener("click",toggleLog);
 function toggleLog() {
-  // Todo: use isLog10 to determine which log function to use and hence update the button text
+  if(base.value == 'Normal'){
+  base.value = "Base 10";  
+}else{
+  base.value = "Normal";
+}
+}
+
+button.addEventListener("click",switchtheme);
+
+function switchtheme(){
+  if(button.value == 'Light Mode'){
+  button.value = "Dark Mode";
+  document.body.classList.toggle("darktheme")
+}else{
+  button.value = "Light Mode";
+  document.body.classList.toggle("darktheme")
 
 }
+}
+
