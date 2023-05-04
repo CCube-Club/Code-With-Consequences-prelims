@@ -1,5 +1,7 @@
 /*Todo: import Merienda font from Google Font with 500 font weight  */
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 /*Todo: import Arvo font from Google Font with 400 and 700 font weight (Note: Google Fonts allow importing multiple font weights, find how :) )*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;1,700&display=swap');
 
 /*Todo: make the page responsive by fixing the css where ever necessary*/
 body {
@@ -21,6 +23,13 @@ body {
     flex-direction: row;
     border-radius: 30px;
     position: relative;
+    min-width: 300px;
+     min-height: 600px;
+     transition: all ease-in-out 1s;
+ }
+ .card:hover{
+     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+     transition: all ease-in-out 1s;
     
     
 }
@@ -29,6 +38,7 @@ body {
     padding: 1rem;
     text-align: right;
     color: rgb(39 39 42);
+    min-height: 160px;
     font-size: 14px;
 }
 .card .desc {
@@ -43,6 +53,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     padding: 0.5rem 1rem;
+    position: absolute;
 }
 .card svg {
     width: 85px;
@@ -57,12 +68,18 @@ body {
     border-radius: 50%;
     border: 6px solid white;
     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-    top: 45px;     /*Todo: can we make it responsive ? */
-    left: 170px;   /*Todo: can we make it responsive ? */
+    top: 10%;     /*Todo: can we make it responsive ? */
+    left: 20%;   /*Todo: can we make it responsive ? */
+ }
+ .img-avatar img{
+     max-width: 100%;
+     max-height: 100%;
+     border-radius: 50%;
 }
 
 .card-text {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 2fr;
 }
 
