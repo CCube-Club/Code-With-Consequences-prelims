@@ -45,8 +45,27 @@
       Scroll down for calculator ↓
     </p>
   </section>
-  <section class="wrapper">
-    <div class="wrap">
+  <section class="wrapper" id="wrapper">
+    <div class="wrap" id="wrap">
+      <div class="button" id="topButtons" onclick="changeOrientation()" value="">
+        <div class="square-front">
+          <div class="relative-box">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </div>
+        </div>
+        <div class="square-back">
+          <div class="relative-box">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </div>
+        </div>
+        <span class="label">Change Orientation</span>
+      </div>
       <div class="button" id="topButtons" onclick="switchTheme()" value="">
         <div class="square-front">
           <div class="relative-box">
@@ -110,7 +129,7 @@
         <div class="radButtonCont">
           Degree
         </div>
-      </div>z
+      </div>
       <table id="calc_frame" class="calculator" cellspacing="0" cellpadding="1">
         <tr>
           <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
