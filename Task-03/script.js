@@ -2,6 +2,7 @@ const root = document.querySelector("html");
 
 let isRadian = false;
 let isLog10 = false;
+let isOrientationPortrait = true;
 
 const cursor = document.createElement("div");
 cursor.classList.add("cursor");
@@ -26,16 +27,35 @@ function addChar(input, character) {
 }
 
 function cos(form) {
-  form.display.value = Math.cos(form.display.value);
+  let val = form.display.value;
+  if (isRadian) {
+    val = parseFloat(val);
+  } else {
+    val = (parseFloat(val) * Math.PI) / 180;
+  }
+  form.display.value = Math.cos(val);
 }
 
 function sin(form) {
-  form.display.value = Math.sin(form.display.value);
+  let val = form.display.value;
+  if (isRadian) {
+    val = parseFloat(val);
+  } else {
+    val = (parseFloat(val) * Math.PI) / 180;
+  }
+  form.display.value = Math.sin(val);
 }
 
 function tan(form) {
-  form.display.value = Math.tan(form.display.value);
+  let val = form.display.value;
+  if (isRadian) {
+    val = parseFloat(val);
+  } else {
+    val = (parseFloat(val) * Math.PI) / 180;
+  }
+  form.display.value = Math.tan(val);
 }
+
 
 function sqrt(form) {
   form.display.value = Math.sqrt(form.display.value);
@@ -43,9 +63,9 @@ function sqrt(form) {
 
 function ln(form) {
   if (isLog10) {
-    // Todo: Update the display value with log10 of the input
+    form.display.value = Math.log10(form.display.value);
   } else {
-    // Todo: Update the display value with log of the input
+    form.display.value = Math.log(form.display.value);
   }
 }
 
@@ -56,6 +76,7 @@ function exp(form) {
 function deleteChar(input) {
   input.value = input.value.substring(0, input.value.length - 1);
 }
+
 var val = 0.0;
 function percent(input) {
   val = input.value;
@@ -98,17 +119,27 @@ function checkNum(str) {
   return true;
 }
 
+function changeOrientation() {
+  const orientation = document.getElementById('topButtons');
+  orientation.classList.toggle('buttonCol');
+}
+
 function switchTheme() {
-    // Todo : toggle the dark class on the calculator element
-    // Todo : toggle the dark class on the calculator element
-    // Todo : You may further move with your own css to change the theme of the calculator
+  var calculator = document.getElementById('calc_frame');
+  calculator.classList.toggle('dark');
 }
 
 function toggleRad() {
-  Todo //: use isRadian to determine which conversion to use and hence update the #display value
+  isRadian = !isRadian;
+  const radToggle = document.getElementById('radToggle');
+  radToggle.classList.toggle('radToggle');
+  radToggle.innerText = isRadian ? 'Radian' : 'Degree';
+  console.log(isRadian);
 }
 
 function toggleLog() {
-  // Todo: use isLog10 to determine which log function to use and hence update the button text
-
+  isLog10 = !isLog10;
+  const logToggle = document.getElementById('log');
+  logToggle.value = isLog10 ? 'log10' : 'ln';
+  console.log(isLog10);
 }

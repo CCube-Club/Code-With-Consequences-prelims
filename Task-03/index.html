@@ -47,23 +47,78 @@
   </section>
   <section class="wrapper">
     <div class="wrap">
-      <div>
-        <input type="button" value="Switch Theme" class="themeSwitchButton" onclick="switchTheme()">
+      <div class="button" id="topButtons" onclick="switchTheme()" value="">
+        <div class="square-front">
+          <div class="relative-box">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </div>
+        </div>
+        <div class="square-back">
+          <div class="relative-box">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </div>
+        </div>
+        <span class="label">Switch Theme</span>
       </div>
-      <div>
-        <input type="button" value="Toggle Log Base 10" class="themeSwitchButton" onclick="toggleLog()">
+      <div class="button" id="topButtons" onclick="toggleLog()" value="">
+        <div class="square-front">
+          <div class="relative-box">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </div>
+        </div>
+        <div class="square-back">
+          <div class="relative-box">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </div>
+        </div>
+        <span class="label">Toggle Log Base 10</span>
       </div>
-      <div>
-        <input type="button" value="Toggle Radian/Degree" class="themeSwitchButton" onclick="toggleRad()">
+      <div class="button" id="topButtons" onclick="toggleRad()" value="">
+        <div class="square-front">
+          <div class="relative-box">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-left"></span>
+            <span class="line line-bottom"></span>
+          </div>
+        </div>
+        <div class="square-back">
+          <div class="relative-box">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </div>
+        </div>
+        <span class="label">Toggle Radian/Degree</span>
       </div>
     </div>
     <form name="sci-calc">
-      <table class="calculator" cellspacing="0" cellpadding="1">
+      <div id="radToggle" class="radButton">
+        <div class="radButtonCont">
+          Degree
+        </div>
+      </div>z
+      <table id="calc_frame" class="calculator" cellspacing="0" cellpadding="1">
         <tr>
           <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
         </tr>
         <tr>
-          <td><input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.display.value=  0 "></td>
+          <td>
+            <input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.display.value=  0 ">
+          </td>
           <td><input type="button" class="btnTop" name="btnTop" value="<--" onclick="deleteChar(this.form.display)">
           </td>
           <td><input type="button" class="btnTop" name="btnTop" value="="
