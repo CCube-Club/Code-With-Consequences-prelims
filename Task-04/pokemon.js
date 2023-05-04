@@ -22,8 +22,8 @@ const createCard = (pokemon) => {
     setTimeout(() => {
       copyMessage[0].style.display = "none";
     }
-    , 1000);
-    
+    , 1500);
+
   }
 
   const image = document.createElement("img");

@@ -136,12 +136,13 @@ main{
 
 .clipboard-message{
   display: none;
+  position: fixed;
   margin: 20px 0px;
   font-size: 20px;
   font-weight: 600;
-  color: green;
+  color: rgb(0, 169, 0);
   z-index: 100;
-  background-color: rgb(168, 224, 144);
+  background-color: rgba(157, 219, 131, 0.986);
   width: fit-content;
   padding: 20px 40px;
   border-radius: 10px;
