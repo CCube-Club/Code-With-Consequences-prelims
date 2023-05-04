@@ -102,13 +102,36 @@ function switchTheme() {
     // Todo : toggle the dark class on the calculator element
     // Todo : toggle the dark class on the calculator element
     // Todo : You may further move with your own css to change the theme of the calculator
+    if (document.querySelector('.calculator').classList.contains('dark')) {
+      document.querySelector('.calculator').classList.remove('dark');
+      document.querySelector('.darkBtnTop').classList.remove('darkBtnTop');
+      document.querySelector('.darkBtnNum').classList.remove('darkBtnNum');
+      document.querySelector('.darkBtnColorGeneric').classList.remove('darkBtnColorGeneric');
+      document.querySelector('.log').classList.remove('log'); }
+      else {
+      document.querySelector('.calculator').classList.add('dark');
+      document.querySelector('.btnTop').classList.add('darkBtnTop');
+      document.querySelector('.btnNum').classList.add('darkBtnNum');
+      document.querySelector('.btnMath').classList.add('darkBtnColorGeneric');
+      document.querySelector('#log').classList.add('log'); }
 }
 
 function toggleRad() {
-  Todo //: use isRadian to determine which conversion to use and hence update the #display value
+  //: use isRadian to determine which conversion to use and hence update the #display value
+  if (isRadian) {
+    form.display.value = Math.toDegrees(form.display.value);
+    }
+    else {
+    form.display.value = Math.toRadians(form.display.value); }
+    isRadian = !isRadian;
 }
 
 function toggleLog() {
   // Todo: use isLog10 to determine which log function to use and hence update the button text
-
+  if (isLog10) {
+    document.querySelector("#log").innerHTML = "log10";
+    }
+    else {
+    document.querySelector("#log").innerHTML = "ln"; }
+    isLog10 = !isLog10;
 }

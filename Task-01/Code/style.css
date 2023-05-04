@@ -20,7 +20,7 @@ body {
     border: #414141 9px solid;
     flex-direction: row;
     border-radius: 30px;
-    z-index: 1;
+    position: relative;
     
     
 }
