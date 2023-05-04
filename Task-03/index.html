@@ -79,7 +79,8 @@
           </td>
           <td><input type="button" class="btn btnNum" name="btnNum" value="9" onclick="addChar(this.form.display, '9')">
           </td>
-          <td><input type="button" class="btn btnOpps" name="btnOpps" value="x&#94;"
+          <!-- Fixed bug x^ to e^ -->
+          <td><input type="button" class="btn btnOpps" name="btnOpps" value="e&#94;" 
               onclick="if(checkNum(this.form.display.value)) { exp(this.form) }"></td>
           <td><input type="button" class="btn btnMath" name="btnMath" value="/" onclick="addChar(this.form.display, '/')">
           </td>
