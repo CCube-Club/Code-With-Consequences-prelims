@@ -2,6 +2,7 @@ const apiURL = "https://pokeapi.co/api/v2/pokemon/";
 const cardContainer = document.getElementById("cards");
 const filterInput = document.getElementById("search-bar");
 const typeFilter = document.getElementById("tags");
+const copyMessage = document.getElementsByClassName("clipboard-message");
 var allTypeList = [];
 
 const fetchData = async (url) => {
@@ -14,6 +15,16 @@ const fetchData = async (url) => {
 const createCard = (pokemon) => {
   const card = document.createElement("div");
   card.classList.add("card");
+
+  card.onclick = () => {
+    copyContent(pokemon.name);
+    copyMessage[0].style.display = "block";
+    setTimeout(() => {
+      copyMessage[0].style.display = "none";
+    }
+    , 1000);
+    
+  }
 
   const image = document.createElement("img");
   image.src = pokemon.sprites.front_default;
@@ -42,7 +53,7 @@ const createCard = (pokemon) => {
   types.textContent = pokemon.types.map((type) =>{
      card.appendChild(typeTag(type.type.name))
      
-    if (!allTypeList.includes(type)) {
+    if (!allTypeList.includes(type.type.name)) {
         allTypeList.push(type.type.name);
         typeFilter.appendChild(typeTag(type.type.name));
       }
@@ -89,16 +100,20 @@ const typeTag = (type) => {
 
   tag.classList.add("tag");
   tag.textContent = type;
-  tag.addEventListener("click",)
+  // tag.addEventListener("click",)
   return tag;
 };
 
-const tagTap = (type) =>{
-    
+const copyContent = async (content) => {
+  try {
+    await navigator.clipboard.writeText(content);
+    console.log('Content copied to clipboard');
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
 }
 
 const displayData = (data) => {
-    allTypeList = [];
   typeFilter.innerHTML = "";
   cardContainer.innerHTML = "";
   data.forEach(async (pokemon) => {
