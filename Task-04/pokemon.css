@@ -18,12 +18,15 @@ main{
     background-color: black;
     width: 100%;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 50px 20px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-weight: 600;
 }
 
 .search-bar {
@@ -85,7 +88,8 @@ main{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 3    px;
+    margin-bottom: 3px;
+    font-size: small;
   }
   
   .card .types {
@@ -104,11 +108,11 @@ main{
   }
 
   .tag{
-    padding: 2px 5px;
-    border-radius: 5px;
+    padding: 4px 7px;
+    border-radius: 7px;
     margin: 2px;
     color: white;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: capitalize;
     width: fit-content;
   }
@@ -116,10 +120,35 @@ main{
   #tags{
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 70%;
     gap: 10px;
   }
 
   .tag-box{
-    margin: 35px 0px;
+    margin: 45px 0px;
   }
+
+.type-head{
+  margin: 20px 0px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.clipboard-message{
+  display: none;
+  position: fixed;
+  margin: 20px 0px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(0, 169, 0);
+  z-index: 100;
+  background-color: rgba(157, 219, 131, 0.986);
+  width: fit-content;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.type-card{
+  display: flex;
+    flex-wrap: wrap;
+}
