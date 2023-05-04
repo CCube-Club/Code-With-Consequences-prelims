@@ -44,8 +44,11 @@ function sqrt(form) {
 function ln(form) {
   if (isLog10) {
     // Todo: Update the display value with log10 of the input
-  } else {
+    form.display.value = Math.log10(form.display.value);
+  } 
+  else {
     // Todo: Update the display value with log of the input
+    form.display.value = Math.log(form.display.value);
   }
 }
 
@@ -97,18 +100,45 @@ function checkNum(str) {
   }
   return true;
 }
-
 function switchTheme() {
     // Todo : toggle the dark class on the calculator element
-    // Todo : toggle the dark class on the calculator element
     // Todo : You may further move with your own css to change the theme of the calculator
+
+  var btnTop = document.getElementsByClassName("btnTop");
+  var btnNum = document.getElementsByClassName("btnNum");
+  var calc = document.getElementsByClassName("calculator");
+
+  for (var i=0; i<calc.length; i++){
+    calc[i].classList.toggle("dark");
+  }
+  for (var i=0; i<btnTop.length; i++){
+    btnTop[i].classList.toggle("darkBtnTop");
+  }
+  for (var i=0; i<btnNum.length; i++){
+    btnNum[i].classList.toggle("darkBtnNum");
+  }
 }
 
 function toggleRad() {
-  Todo //: use isRadian to determine which conversion to use and hence update the #display value
+  // Todo : use isRadian to determine which conversion to use and hence update the #display value
+  isRadian = !isRadian;
+  const display = document.getElementById("display");
+  if (isRadian) {
+    display.value = display.value * (Math.PI / 180);
+  } else {
+    display.value = display.value / (Math.PI / 180);
+  }
+
 }
 
 function toggleLog() {
   // Todo: use isLog10 to determine which log function to use and hence update the button text
+  isLog10 = !isLog10;
+  const logButton = document.getElementById("log");
+  if (isLog10) {
+    logButton.value = "log10";
+  } else {
+    logButton.value = "ln";
+  }
 
 }

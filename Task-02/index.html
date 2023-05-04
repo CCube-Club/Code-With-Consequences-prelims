@@ -33,22 +33,46 @@
     </p>
     <div class="main">
       <div id="color-sliders">
-        <div>
+        
           <label for="blue-slider">Size:</label>
+          <div class='range'>
           <input type="range" id="slider" min="1" max="9" value=2 onchange="update(this.value);">
+          <span>0</span>
         </div>
-        <div>
+          
           <label for="red-slider">Red:</label>
-<!--          Todo: Add a slider here (Note: id="red-slider")-->
+          <div class='range'>
+          <input type="range" id="red-slider" min="0" max="255" value="0" onchange="updateColor();">
+          <span>0</span>
         </div>
-        <div>
           <label for="green-slider">Green:</label>
-<!--          Todo: Add a slider here (Note: id="green-slider")-->
+          <div class='range'>
+          <input type="range" id="green-slider" min="0" max="255" value="0" onchange="updateColor();">
+          <span>0</span>
         </div>
-        <div>
           <label for="blue-slider">Blue:</label>
-<!--          Todo: Add a slider here (Note: id="blue-slider")-->
+          <div class='range'>
+          <input type="range" id="blue-slider" min="0" max="255" value="0" onchange="updateColor();">
+          <span>0</span>
         </div>
+        
+    
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"></script>
+          <script type="text/javascript">
+
+$(function() {
+  $('.range input').on('mousemove', function() {
+    var getValRange = $(this).val();
+    $(this).siblings('span').text(getValRange);
+  });
+});
+        
+        
+          </script>
       </div>
       <div id="wrapper">
         <div>

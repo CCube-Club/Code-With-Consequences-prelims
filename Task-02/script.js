@@ -32,9 +32,9 @@ function updateColor() {
   var redValue = document.getElementById("red-slider").value;
   var greenValue = document.getElementById("green-slider").value;
   var blueValue = document.getElementById("blue-slider").value;
-  var colorString = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
-
-  // Todo: Update the text color
-
+  var color = "rgb(" + redValue + ", " + greenValue + ", " + blueValue + ")";
+  document.getElementById("work").style.color = color;
+  document.getElementById("life").style.color = color;
+  document.getElementById("balance").style.color = color;
 }
   
