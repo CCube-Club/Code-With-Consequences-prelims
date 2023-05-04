@@ -122,6 +122,10 @@ function checkNum(str) {
 function changeOrientation() {
   const orientation = document.getElementById('topButtons');
   orientation.classList.toggle('buttonCol');
+  const orientation2 = document.getElementById('wrapper');
+  orientation2.classList.toggle('wrapperCol');
+  const orientation3 = document.getElementById('wrap');
+  orientation3.classList.toggle('wrapCol');
 }
 
 function switchTheme() {

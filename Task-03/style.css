@@ -295,7 +295,7 @@ p {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
-  width: auto;
+  width: 350px;
 }
 
 .radToggle {
@@ -339,12 +339,14 @@ p {
   font-size: 14px;
   margin: auto;
   width: 50px;
+  border-radius: 10px;
   height: 25px;
 }
 
 .btnNum {
   color: white;
   background-color: black;
+  border-radius: 10px;
   font-size: 14px;
   margin: auto;
   width: 50px;
@@ -357,6 +359,7 @@ p {
   font-size: 14px;
   margin: auto;
   width: 50px;
+  border-radius: 10px;
   height: 25px;
 }
 
@@ -365,6 +368,7 @@ p {
   background-color: #ff9933;
   font-size: 14px;
   margin: auto;
+  border-radius: 10px;
   width: 50px;
   height: 25px;
 }
