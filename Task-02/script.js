@@ -28,13 +28,25 @@ function update(value) {
     document.getElementById("life").style.fontStretch=stretch[9-value];
 }
   
+// function updateColor() {
+//   var redValue = document.getElementById("red-slider").value;
+//   var greenValue = document.getElementById("green-slider").value;
+//   var blueValue = document.getElementById("blue-slider").value;
+//   var colorString = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
+
+//   // Todo: Update the text color
+
+// }
+
 function updateColor() {
   var redValue = document.getElementById("red-slider").value;
   var greenValue = document.getElementById("green-slider").value;
   var blueValue = document.getElementById("blue-slider").value;
   var colorString = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
-
-  // Todo: Update the text color
-
+  // Update the text color
+  var textElements = document.querySelectorAll("#work, #life, #balance");
+  for (var i = 0; i < textElements.length; i++) {
+    textElements[i].style.color = colorString;
+  }
 }
   

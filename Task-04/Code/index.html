@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="searchArea">
+        <input
+          type="text"
+          class="searchInput"
+          id="searchBox"
+          placeholder="Search Pokemon"
+        />
+        <div class="searchText">
+          Use this input to search for any pokemon. In <br />an instant.
+        </div>
+      </div>
+      <div class="filterArea">
+        <div class="filterAreaFirst">
+          <div class="filterTitle">Filter by type:</div>
+          <div class="">
+            <ul class="filterList" id="filterList">
+              <li class="filter normal selected">Normal</li>
+              <li class="filter grass">Grass</li>
+              <li class="filter fire">Fire</li>
+              <li class="filter water">Water</li>
+              <li class="filter bug">Bug</li>
+              <li class="filter electric">Electric</li>
+              <li class="filter rock">Rock</li>
+              <li class="filter ghost">Ghost</li>
+              <li class="filter poison">Poison</li>
+              <li class="filter psychic">Psychic</li>
+              <li class="filter fighting">Fighting</li>
+              <li class="filter ground">Ground</li>
+              <li class="filter dragon">Dragon</li>
+              <li class="reset">Reset</li>
+            </ul>
+          </div>
+        </div>
+        <div class="filterAreaSecond">
+          <select class="filterAreaSelect">
+            <option>ID ASC</option>
+          </select>
+        </div>
+      </div>
+      <div class="pokeArea"></div>
+    </div>
+  </body>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</html>
