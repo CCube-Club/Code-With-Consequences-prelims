@@ -21,15 +21,13 @@ const createCard = (pokemon) => {
     copyMessage[0].style.display = "block";
     setTimeout(() => {
       copyMessage[0].style.display = "none";
-    }
-    , 1500);
-
-  }
+    }, 1500);
+  };
 
   const image = document.createElement("img");
   image.src = pokemon.sprites.front_default;
   card.appendChild(image);
-  
+
   const details = document.createElement("div");
   details.classList.add("details");
 
@@ -49,17 +47,19 @@ const createCard = (pokemon) => {
   name.textContent = pokemon.name;
   card.appendChild(name);
 
+  const typeCard = document.createElement("div");
+  typeCard.classList.add("type-card");
   const types = document.createElement("p");
-  types.textContent = pokemon.types.map((type) =>{
-     card.appendChild(typeTag(type.type.name))
-     
+  types.textContent = pokemon.types.map((type) => {
+    typeCard.appendChild(typeTag(type.type.name));
+
     if (!allTypeList.includes(type.type.name)) {
-        allTypeList.push(type.type.name);
-        typeFilter.appendChild(typeTag(type.type.name));
-      }
-  }
-   
-  );
+      allTypeList.push(type.type.name);
+      typeFilter.appendChild(typeTag(type.type.name));
+    }
+
+    card.appendChild(typeCard);
+  });
 
   cardContainer.appendChild(card);
 };
@@ -107,11 +107,11 @@ const typeTag = (type) => {
 const copyContent = async (content) => {
   try {
     await navigator.clipboard.writeText(content);
-    console.log('Content copied to clipboard');
+    console.log("Content copied to clipboard");
   } catch (err) {
-    console.error('Failed to copy: ', err);
+    console.error("Failed to copy: ", err);
   }
-}
+};
 
 const displayData = (data) => {
   typeFilter.innerHTML = "";
@@ -136,7 +136,6 @@ const init = async () => {
   filterInput.addEventListener("input", () => {
     filterData(data.results, filterInput.value);
   });
-
 };
 
 init();
