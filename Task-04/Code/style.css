@@ -1,0 +1,249 @@
+/* Media Queries */
+
+/* Tags */
+body {
+  background-color: #f0f0f0;
+}
+
+/* ID */
+
+/* Classes */
+.container {
+  padding: 1rem 3rem 3rem 4rem;
+  font-family: "VT323", monospace;
+}
+
+/* SearchArea */
+.searchArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #313131;
+  padding: 1.5rem;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.searchInput {
+  padding: 20px 15px 10px 13px;
+  border-radius: 10px;
+}
+
+.searchInput::placeholder {
+  color: #a59c9a;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: "VT323", monospace;
+}
+
+.searchText {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #f0f0f0;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+/* Filter Area */
+
+.filterArea {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.filterTitle {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #313131;
+}
+
+.filterList {
+  list-style: none;
+  max-width: 100px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.filter {
+  padding: 10px 30px 10px 30px;
+  margin: 13px 10px 5px 3px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.reset {
+  padding: 10px 30px 10px 30px;
+  margin: 13px 10px 5px 3px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-color: black;
+  color: #f0f0f0;
+}
+
+.filterAreaFirst {
+  /* overflow: auto; */
+  word-wrap: break-all;
+}
+
+.filterAreaSecond {
+  justify-self: right;
+}
+
+.filterAreaSelect {
+  padding: 15px;
+  width: 300px;
+  border-radius: 11px;
+  color: #f0f0f0;
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  background-color: #262626;
+}
+/* filterButtonColors */
+
+.normal {
+  background-color: #123ab3;
+  color: #f0f0f0;
+}
+
+.grass {
+  background-color: #47ab57;
+  color: #f0f0f0;
+}
+
+.fire {
+  background-color: #fd7d24;
+  color: #f0f0f0;
+}
+
+.water {
+  background-color: #4592c4;
+  color: #f0f0f0;
+}
+
+.bug {
+  background-color: #719f3f;
+  color: #f0f0f0;
+}
+
+.electric {
+  background-color: #eed535;
+  color: #f0f0f0;
+}
+
+.rock {
+  background-color: #a38c21;
+  color: #f0f0f0;
+}
+
+.ghost {
+  background-color: #7b62a3;
+  color: #f0f0f0;
+}
+
+.poison {
+  background-color: #b97fc9;
+  color: #f0f0f0;
+}
+
+.psychic {
+  background-color: #f366b9;
+  color: #f0f0f0;
+}
+
+.fighting {
+  background-color: #d56723;
+  color: #f0f0f0;
+}
+
+.ground {
+  background-color: #ab9842;
+  color: #f0f0f0;
+}
+
+.dragon {
+  background-color: #f06d56;
+  color: #f0f0f0;
+}
+
+.selected {
+  background-color: #d9d9d9;
+  color: #f0f0f0;
+}
+
+/* Pokemon Area */
+
+.pokeArea {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.idExpArea {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.pokeExp {
+  justify-self: right;
+}
+
+.pokeArea {
+  margin-top: 20px;
+}
+
+.pokeCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.pokeImg {
+  background-color: #d9d9d9;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.pokeName {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.typeFilter {
+  padding: 10px 30px 10px 30px;
+  margin: 13px 10px 5px 3px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  width: 5rem;
+  cursor: default;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.img {
+  width: 13rem;
+  height: auto;
+}

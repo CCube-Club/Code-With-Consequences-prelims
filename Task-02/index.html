@@ -33,21 +33,23 @@
     </p>
     <div class="main">
       <div id="color-sliders">
-        <div>
-          <label for="blue-slider">Size:</label>
-          <input type="range" id="slider" min="1" max="9" value=2 onchange="update(this.value);">
-        </div>
-        <div>
-          <label for="red-slider">Red:</label>
-<!--          Todo: Add a slider here (Note: id="red-slider")-->
-        </div>
-        <div>
-          <label for="green-slider">Green:</label>
-<!--          Todo: Add a slider here (Note: id="green-slider")-->
-        </div>
-        <div>
-          <label for="blue-slider">Blue:</label>
-<!--          Todo: Add a slider here (Note: id="blue-slider")-->
+        <div id="color-sliders">
+          <div>
+            <label for="slider">Size:</label>
+            <input type="range" id="slider" min="1" max="9" value=2 onchange="updateColor();">
+          </div>
+          <div>
+            <label for="red-slider">Red:</label>
+            <input type="range" id="red-slider" min="0" max="255" value="0" onchange="updateColor();">
+          </div>
+          <div>
+            <label for="green-slider">Green:</label>
+            <input type="range" id="green-slider" min="0" max="255" value="0" onchange="updateColor();">
+          </div>
+          <div>
+            <label for="blue-slider">Blue:</label>
+            <input type="range" id="blue-slider" min="0" max="255" value="0" onchange="updateColor();">
+          </div>
         </div>
       </div>
       <div id="wrapper">

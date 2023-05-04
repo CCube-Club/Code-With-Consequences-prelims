@@ -1,11 +1,16 @@
 /*Todo: import Merienda font from Google Font with 500 font weight  */
 /*Todo: import Arvo font from Google Font with 400 and 700 font weight (Note: Google Fonts allow importing multiple font weights, find how :) )*/
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,400;1,700&display=swap');
 
 /*Todo: make the page responsive by fixing the css where ever necessary*/
 body {
     margin: 0;
     height: 100vh;
     /*Todo: center all the contend using appropriate properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f5f5f5;
 }
 .card {
@@ -16,8 +21,10 @@ body {
     height: 60%;
     border: #414141 9px solid;
     flex-direction: row;
+    border: #000000;
     border-radius: 30px;
     /*Todo: css required to make the image-avatar div floating */
+    position: relative;
 }
 .card .title {
     font-family: 'Arvo', serif;
@@ -48,6 +55,7 @@ body {
     width: 180px;
     height: 180px;
     /*Todo: position this div to overlay the card */
+    position: absolute;
     border-radius: 50%;
     border: 6px solid white;
     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
@@ -77,6 +85,7 @@ path {
     background-size: cover;
     background-color: #000000;
     /*Todo: apply a background gradient at 315deg from color #000000 0% to #414141 74% (Or play around with more css )*/
+    background: linear-gradient(315deg, #000000 0%, #414141, 74%);
 }
 
 .name {
@@ -85,4 +94,9 @@ path {
     font-weight: bold;
     color: rgb(55 65 81);
     margin: 0;
+}
+
+#img-holder{
+    padding-top: 10px;
+    padding-left: 20px;
 }
