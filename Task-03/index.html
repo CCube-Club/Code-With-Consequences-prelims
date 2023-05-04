@@ -48,21 +48,29 @@
   <section class="wrapper">
     <div class="wrap">
       <div>
-        <input type="button" value="Switch Theme" class="themeSwitchButton" onclick="switchTheme()">
+        <div id="theme"></div>
+        <input type="button" value="Light Mode" class="themeSwitchButton" >
+
+      </div>
+      <div >
+        <div id="base"></div>
+
+        <input type="button" value="Normal" class="toggle-base" id="base-btn">
+
       </div>
       <div>
-        <input type="button" value="Toggle Log Base 10" class="themeSwitchButton" onclick="toggleLog()">
-      </div>
-      <div>
-        <input type="button" value="Toggle Radian/Degree" class="themeSwitchButton" onclick="toggleRad()">
-      </div>
+        <div id="rad"></div>
+        <input type="button1" value="Radian" class="toggle-rad" id="radian-btn">
+
+      </div> 
     </div>
     <form name="sci-calc">
       <table class="calculator" cellspacing="0" cellpadding="1">
         <tr>
           <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
         </tr>
-        <tr>
+        <tr class="func
+        ">
           <td><input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.display.value=  0 "></td>
           <td><input type="button" class="btnTop" name="btnTop" value="<--" onclick="deleteChar(this.form.display)">
           </td>
@@ -72,7 +80,7 @@
               onclick="addChar(this.form.display,'3.14159265359')"></td>
           <td><input type="button" class="btnMath" name="btnMath" value="%" onclick=" percent(this.form.display)"></td>
         </tr>
-        <tr>
+        <tr class="bottom">
           <td><input type="button" class="btnNum" name="btnNum" value="7" onclick="addChar(this.form.display, '7')">
           </td>
           <td><input type="button" class="btnNum" name="btnNum" value="8" onclick="addChar(this.form.display, '8')">
@@ -83,7 +91,7 @@
               onclick="if(checkNum(this.form.display.value)) { exp(this.form) }"></td>
           <td><input type="button" class="btnMath" name="btnMath" value="/" onclick="addChar(this.form.display, '/')">
           </td>
-        <tr>
+        <tr class="middle">
           <td><input type="button" class="btnNum" name="btnNum" value="4" onclick="addChar(this.form.display, '4')">
           </td>
           <td><input type="button" class="btnNum" name="btnNum" value="5" onclick="addChar(this.form.display, '5')">
@@ -95,7 +103,7 @@
           <td><input type="button" class="btnMath" name="btnMath" value="*" onclick="addChar(this.form.display, '*')">
           </td>
         </tr>
-        <tr>
+        <tr class="top">
           <td><input type="button" class="btnNum" name="btnNum" value="1" onclick="addChar(this.form.display, '1')">
           </td>
           <td><input type="button" class="btnNum" name="btnNum" value="2" onclick="addChar(this.form.display, '2')">
@@ -107,7 +115,7 @@
           <td><input type="button" class="btnMath" name="btnMath" value="-" onclick="addChar(this.form.display, '-')">
           </td>
         </tr>
-        <tr>
+        <tr class="brackets">
           <td><input type="button" class="btnMath" name="btnMath" value="&#177" onclick="changeSign(this.form.display)">
           </td>
           <td><input type="button" class="btnNum" name="btnNum" value="0" onclick="addChar(this.form.display, '0')">
@@ -119,7 +127,7 @@
           <td><input type="button" class="btnMath" name="btnMath" value="+" onclick="addChar(this.form.display, '+')">
           </td>
         </tr>
-        <tr>
+        <tr class="cosine">
           <td><input type="button" class="btnMath" name="btnMath" value="(" onclick="addChar(this.form.display, '(')">
           </td>
           <td><input type="button" class="btnMath" name="btnMath" value=")" onclick="addChar(this.form.display,')')">
