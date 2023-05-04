@@ -97,16 +97,19 @@ html {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
     border-color: red;
   }
@@ -141,14 +144,182 @@ p {
   font-size: 20px;
 }
 
+.label {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 50px;
+  display: block;
+  font-size: 18px;
+  padding: 0 1em;
+  transition: all 0.3s ease;
+}
+
+/* fancy button portion comes under this I also added the other button here as well. */
+.cta-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+}
+
+.buttonCol {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.relative-box {
+  position: relative;
+  height: 100%;
+}
+
+.square-front {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  bottom: -5px;
+  left: -10px;
+}
+
+.square-back {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  bottom: -10px;
+  left: -5px;
+}
+
+.line {
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.line-top {
+  position: absolute;
+  height: 1px;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.line-right {
+  position: absolute;
+  width: 1px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.line-bottom {
+  position: absolute;
+  height: 1px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.line-left {
+  position: absolute;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button:hover .label {
+  background-color: white;
+  color: rgba(22, 22, 22, 0.3);
+  box-shadow: 0 0 20px white;
+}
+
+.button:hover .square-back .line-top,
+.button:hover .square-back .line-bottom {
+  left: 50%;
+  right: 50%;
+}
+
+.button:hover .square-back .line-left,
+.button:hover .square-back .line-right {
+  top: 5px;
+  bottom: 5px;
+}
+
+.button:hover .square-front .line-top,
+.button:hover .square-front .line-bottom {
+  right: 5px;
+  left: 5px;
+}
+
+.button:hover .square-front .line-left,
+.button:hover .square-front .line-right {
+  top: 50%;
+  bottom: 50%;
+}
+
+.radButtonCont {
+  width: 350px;
+  justify-content: center;
+  display: flex;
+}
+
+.radButton {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 350px;
+}
+
+.radToggle {
+  background-color: #fff;
+  border-color: #fa6400;
+  color: #fa6400;
+}
+
+.radButton:hover,
+.radButton:hover {
+  transform: translateY(-1px);
+}
+
+
 .calculator {
   width: 350px;
   height: 320px;
   background-color: #c0c0c0;
+  padding: 10px;
   box-shadow: 0px 0px 0px 10px #666;
   border: 5px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
 }
+
 #display {
   width: 320px;
   height: 40px;
@@ -159,45 +330,56 @@ p {
   left: 2px;
   top: 2px;
   color: #7fff00;
+  border-radius: 10px;
 }
+
 .btnTop {
   color: white;
   background-color: #6f6f6f;
   font-size: 14px;
   margin: auto;
   width: 50px;
+  border-radius: 10px;
   height: 25px;
 }
+
 .btnNum {
   color: white;
   background-color: black;
-  font-size: 14px;
-  margin: auto;
-  width: 50px;
-  height: 25px;
-}
-.btnMath {
-  color: white;
-  background-color: #ff4561;
-  font-size: 14px;
-  margin: auto;
-  width: 50px;
-  height: 25px;
-}
-.btnOpps {
-  color: white;
-  background-color: #ff9933;
+  border-radius: 10px;
   font-size: 14px;
   margin: auto;
   width: 50px;
   height: 25px;
 }
 
+.btnMath {
+  color: white;
+  background-color: #ff4561;
+  font-size: 14px;
+  margin: auto;
+  width: 50px;
+  border-radius: 10px;
+  height: 25px;
+}
+
+.btnOpps {
+  color: white;
+  background-color: #ff9933;
+  font-size: 14px;
+  margin: auto;
+  border-radius: 10px;
+  width: 50px;
+  height: 25px;
+}
+
 .wrap {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 30px;
   align-items: end;
-  margin-right: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .themeSwitchButton {
@@ -206,13 +388,41 @@ p {
   color: #c5c5c5;
   border: none;
   box-shadow: #2d2b2b;
-  padding: 2px 7px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.themeSwitchButton:hover {
+  background-color: #807a7a;
+  color: #c5c5c5;
+  border: none;
+  transform: scale(1.2);
+  box-shadow: #2d2b2b;
+  padding: 10px;
   margin-bottom: 1rem;
 }
 
-/*Todo: write css for .themeSwitchButton:hover*/
 
 /*Todo: postion the wrapper for the buttons to position them on the left side of the calculator*/
+.wrapperCol {
+  display: flex;
+  flex-direction: row;
+  height: 320px;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.wrapCol {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
 
 
 .dark {

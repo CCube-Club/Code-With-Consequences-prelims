@@ -39,18 +39,51 @@
         </div>
         <div>
           <label for="red-slider">Red:</label>
-<!--          Todo: Add a slider here (Note: id="red-slider")-->
+          <input type="range" id="red-slider" min="0" max="255" value=100 onchange="updateColor(this.value);">
+          <span id="red-value" class="value">100</span>
         </div>
         <div>
           <label for="green-slider">Green:</label>
-<!--          Todo: Add a slider here (Note: id="green-slider")-->
+          <input type="range" id="green-slider" min="0" max="255" value=100 onchange="updateColor(this.value);">
+          <span class="value" id="green-value">100</span>
         </div>
         <div>
           <label for="blue-slider">Blue:</label>
-<!--          Todo: Add a slider here (Note: id="blue-slider")-->
+          <input type="range" id="blue-slider" min="0" max="255" value=100 onchange="updateColor(this.value);">
+          <span id="blue-value" class="value">100</span>
         </div>
       </div>
       <div id="wrapper">
+        <!-- <div class="snowflake">
+          ❅
+          </div>
+          <div class="snowflake">
+          ❅
+          </div>
+          <div class="snowflake">
+          ❆
+          </div>
+          <div class="snowflake">
+          ❄
+          </div>
+          <div class="snowflake">
+          ❅
+          </div>
+          <div class="snowflake">
+          ❆
+          </div>
+          <div class="snowflake">
+          ❄
+          </div>
+          <div class="snowflake">
+          ❅
+          </div>
+          <div class="snowflake">
+          ❆
+          </div>
+          <div class="snowflake">
+          ❄
+          </div> -->
         <div>
           <span id="work">AUM </span><span id="life">NAMAH</span>
         </div>

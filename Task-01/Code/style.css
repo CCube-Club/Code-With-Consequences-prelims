@@ -1,24 +1,57 @@
 /*Todo: import Merienda font from Google Font with 500 font weight  */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap');
 /*Todo: import Arvo font from Google Font with 400 and 700 font weight (Note: Google Fonts allow importing multiple font weights, find how :) )*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 
 /*Todo: make the page responsive by fixing the css where ever necessary*/
 body {
     margin: 0;
     height: 100vh;
     /*Todo: center all the contend using appropriate properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f5f5f5;
 }
-.card {
+
+.card,
+.about-card,
+.projects-card {
     background: #fff;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    display: flex;
+
     width: 40%;
     height: 60%;
     border: #414141 9px solid;
-    flex-direction: row;
+
     border-radius: 30px;
     /*Todo: css required to make the image-avatar div floating */
+    position: absolute;
+
+    transform-style: preserve-3d;
+    transition: transform 1s;
 }
+
+.card:not(.active) {
+    visibility: hidden;
+}
+
+.card.active {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.5);
+
+}
+
+.card.flip {
+    transform: rotateY(360deg);
+    transition: transform 1s;
+}
+
+.button-group {
+    position: relative;
+    top: 340px;
+    left: 240px;
+}
+
 .card .title {
     font-family: 'Arvo', serif;
     padding: 1rem;
@@ -26,18 +59,21 @@ body {
     color: rgb(39 39 42);
     font-size: 14px;
 }
+
 .card .desc {
     font-family: 'Merienda', cursive;
     padding: 0.5rem 1rem;
     font-size: 12px;
     color: #666666;
 }
+
 .card .actions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     padding: 0.5rem 1rem;
 }
+
 .card svg {
     width: 85px;
     height: 85px;
@@ -48,11 +84,25 @@ body {
     width: 180px;
     height: 180px;
     /*Todo: position this div to overlay the card */
+    position: absolute;
+    transform: translate(-35%, -10%);
     border-radius: 50%;
     border: 6px solid white;
     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-    top: 45px;     /*Todo: can we make it responsive ? */
-    left: 170px;   /*Todo: can we make it responsive ? */
+    top: 45px;
+    /*Todo: can we make it responsive ? */
+    left: 170px;
+    /*Todo: can we make it responsive ? */
+
+}
+
+.img-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* added */
+    border-radius: 50%;
+    /* added */
 }
 
 .card-text {
@@ -77,6 +127,7 @@ path {
     background-size: cover;
     background-color: #000000;
     /*Todo: apply a background gradient at 315deg from color #000000 0% to #414141 74% (Or play around with more css )*/
+    background: linear-gradient(315deg, #000000 0%, #414141 74%)
 }
 
 .name {
@@ -85,4 +136,100 @@ path {
     font-weight: bold;
     color: rgb(55 65 81);
     margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    .card {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+
+    }
+
+    .img-avatar {
+        transform: translate(-100%, -100%);
+        top: 35%;
+        left: 29%;
+        width: 80px;
+        height: 80px;
+
+    }
+
+    .card-text {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .title-total {
+        padding: 2rem;
+
+    }
+
+    .profile-image {
+        height: 50%;
+        border-radius: 20px;
+    }
+
+    .card.active {
+        transform: rotateY(0deg) rotateX(0deg) scale(1);
+    }
+
+    .name {
+        font-size: 2.5em;
+    }
+
+    .card.flip {
+        transform: rotateY(360deg);
+        transition: transform 1s;
+    }
+
+    .button-group {
+        position: relative;
+
+        top: 230px;
+        left: 0px;
+    }
+
+
+}
+
+.button-89 {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #373B44;
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button {
+    margin: 1rem;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.button-89:active {
+    background: var(--color);
+    color: #fff;
 }
