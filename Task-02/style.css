@@ -128,17 +128,20 @@ span, p {
 #work {
     font-size: 0.2em;
     font-weight:900;
+    color : rgb(0,0,0)
 }
 
 #life {
     font-size: 0.2em;
     font-weight:100;
+    color : rgb(0,0,0)
 }
 
 #balance {
    font-size: 0.6em;
    line-height: 0.3em;
    font-weight: 400;
+   color : rgb(0,0,0)
 }
 
 .main {

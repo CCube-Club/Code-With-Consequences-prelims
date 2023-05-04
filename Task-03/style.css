@@ -211,8 +211,28 @@ p {
 }
 
 /*Todo: write css for .themeSwitchButton:hover*/
+.themeSwitchButton:hover{
+  background-color: #2d2b2b;
+  color: #c5c5c5;
+}
 
 /*Todo: postion the wrapper for the buttons to position them on the left side of the calculator*/
+
+@media screen and (min-width: 200px) {
+  .wrap{
+    margin-left: 25%;
+  }
+}
+@media screen and (min-width: 400px) {
+  .wrap{
+    margin-left: 20%;
+  }
+}
+@media screen and (min-width: 800px) {
+ .wrap{
+  margin-left: 18%;
+ } 
+}
 
 
 .dark {
@@ -236,3 +256,5 @@ p {
 .log {
   background-color: #675555;
 }
+
+
